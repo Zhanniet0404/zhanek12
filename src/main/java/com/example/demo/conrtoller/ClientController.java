@@ -52,10 +52,10 @@ public class ClientController {
     public String addsClient(@ModelAttribute Client client){
         Client client1 = new Client();
         client1.setId(a);
-        client1.setName(client.getName());
+        client1.setAty(client.getAty());
         client1.setEmail(client.getEmail());
-        client1.setPhone(client.getPhone());
-        client1.setAddress(client.getAddress());
+        client1.setTelefon(client.getTelefon());
+        client1.setMekenZhai(client.getMekenZhai());
         clientRepository.save(client1) ;
         return "redirect:/client/main" ;
     }

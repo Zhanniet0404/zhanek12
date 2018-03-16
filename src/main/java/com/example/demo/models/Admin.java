@@ -6,15 +6,15 @@ public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id ;
-    private String firstName ;
-    private String lastName ;
+    private String aty ;
+    private String zhoni ;
     private String email ;
 
     public Admin(){}
 
-    public Admin(String firstName, String lastName, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Admin(String aty, String zhoni, String email) {
+        this.aty= aty;
+        this.zhoni = zhoni;
         this.email = email;
     }
 
@@ -26,20 +26,21 @@ public class Admin {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getAty() {
+        return aty;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setAty(String aty) {
+        this.aty = aty;
     }
 
-    public String getLastName() {
-        return lastName;
+
+    public String getZhoni() {
+        return zhoni;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setZhoni(String zhoni) {
+        this.zhoni = zhoni;
     }
 
     public String getEmail() {

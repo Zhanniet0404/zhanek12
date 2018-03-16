@@ -11,18 +11,18 @@ public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String name;
+    private String aty;
     private String email;
-    private int phone;
-    private String address;
+    private int telefon;
+    private String mekenzhai;
 
 
 
-    public Client(String name, String email, int phone, String address) {
-        this.name = name;
+    public Client(String aty, String email, int telefon, String mekenzhai) {
+        this.aty = aty;
         this.email = email;
-        this.phone = phone;
-        this.address = address;
+        this.telefon = telefon;
+        this.mekenzhai = mekenzhai;
     }
 
     public Client() {
@@ -37,12 +37,12 @@ public class Client {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getAty() {
+        return aty;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setAty(String aty) {
+        this.aty = aty;
     }
 
     public String getEmail() {
@@ -53,19 +53,19 @@ public class Client {
         this.email = email;
     }
 
-    public int getPhone() {
-        return phone;
+    public int getTelefon() {
+        return telefon;
     }
 
-    public void setPhone(int phone) {
-        this.phone = phone;
+    public void setTelefon(int telefon) {
+        this.telefon = telefon;
     }
 
-    public String getAddress() {
-        return address;
+    public String getMekenZhai() {
+        return mekenzhai;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setMekenZhai(String mekenzhai) {
+        this.mekenzhai = mekenzhai;
     }
 }

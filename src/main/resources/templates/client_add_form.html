@@ -10,18 +10,18 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="form-group">
-            <form action="#" th:action="@{/client/add}" th:object = "${publisher}" method="POST">
-                <label for="name">Аты</label>
-                <input type="text" id="name" name="name" th:field = "*{Name}" class="form-control" placeholder="Есімін енгіз" />
+            <form action="#" th:action="@{/client/add}" th:object = "${client}" method="POST">
+                <label for="aty">Аты</label>
+                <input type="text" id="aty" name="aty" th:field = "*{Aty}" class="form-control" placeholder="Есімін енгіз" />
 
                 <label for="email">Почта</label>
                 <input type="text" id="email" name="email" th:field = "*{email}" class="form-control" placeholder="Email енгіз" />
 
-                <label for="phone">Телефон</label>
-                <input type="phone" id="phone" name="phone" th:field = "*{phone}" class="form-control" placeholder="Телефон номерінді енгіз"/>
+                <label for="telefon">Телефон</label>
+                <input type="" id="telefon" name="telefon" th:field = "*{telefon}" class="form-control" placeholder="Телефон номерінді енгіз"/>
 
-                <label for="address">Адресс</label>
-                <input type="text" id="address" name="address" th:field = "*{address}" class="form-control" placeholder="мекен-жайды енгіз" />
+                <label for="mekenzhai">Адресс</label>
+                <input type="text" id="mekenzhai" name="mekenzhai" th:field = "*{mekenzhai}" class="form-control" placeholder="Мекен-жайды енгіз" />
 
                 <br/>
                 <button type="submit" class="btn btn-primary">Сақтау</button>

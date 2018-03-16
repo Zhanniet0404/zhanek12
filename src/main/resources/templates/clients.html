@@ -21,10 +21,10 @@
                 <th>Адресс</th>
             </tr>
             <tr th:each = "admin : ${admins}">
-                <td th:text = "${admin.Name}">test</td>
+                <td th:text = "${admin.Aty}">test</td>
                 <td th:text = "${adminEmail}">test</td>
-                <td th:text = "${admin.Phone}">test</td>
-                <td th:text = "${admin.Address}">test</td>
+                <td th:text = "${admin.Telefon}">test</td>
+                <td th:text = "${admin.Mekenzhai}">test</td>
                 <td> <a th:href = "@{'/admin/deleteAdmin?id='+${admin.id}}">delete</a></td>
                 <td> <a th:href = "@{'/admin/update?id='+${admin.id}}">update</a></td>
             </tr>

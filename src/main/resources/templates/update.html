@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Басты бет</title>
+    <meta charset="UTF-8" />
+    <title>Админ беті</title>
     <link rel="stylesheet" th:href = "@{/css/bootstrap.min.css}" />
 </head>
 <body>
@@ -10,19 +10,16 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="form-group">
-            <form action="#" th:action="@{/demo/adds}" th:object = "${Админ}" method="POST">
-                <label for="firstname">Аты</label>
-                <input type="text" id="firstname" name="firstname" th:field = "*{firstName}" class="form-control" placeholder="Есімін енгіз" value="${author.firstName}" />
+            <form action="#" th:action="@{/demo/adds}" th:object = "${adminn}" method="POST">
+                <label for="aty">Aty</label>
+                <input type="text" id="aty" name="aty" th:field = "*{aty}" class="form-control" placeholder="Атын енгіз" />
 
-                <label for="lastname">Жөні</label>
-                <input type="text" id="lastname" name="lastname" th:field = "*{lastName}" class="form-control" placeholder="Тегін енгіз" value="${author.lastName}" />
-
-                <label for="email">Почта</label>
-                <input type="email" id="email" name="email" th:field = "*{email}" class="form-control" placeholder="Поштасын енгіз" value="${author.email}"/>
-
+                <label for="zhoni">Zhoni</label>
+                <input type="text" id="zhoni" name="zhoni" th:field = "*{zhoni}" class="form-control" placeholder="Жөнін енгіз"/>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" th:field = "*{email}" class="form-control" placeholder="Почтасын енгіз"/>
                 <br/>
                 <button type="submit" class="btn btn-primary">Сақтау</button>
-
 
             </form>
         </div>

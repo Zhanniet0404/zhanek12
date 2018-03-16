@@ -18,20 +18,21 @@ public class AdminController {
     @Autowired
     private AdminRepository adminRepository ;
     private long a;
+
     @RequestMapping("/add")
     public String showForm(Model model){
         model.addAttribute("admin",new Admin());
         return "admin_add_form";
     }
+
     @RequestMapping("/addd")
     public String showFormm(Model model){
         model.addAttribute("adminn",new Admin());
         return "update";
     }
     @PostMapping("/add")
-    public String addAdmin(@ModelAttribute Admin admin){
+    public String addAdmins(@ModelAttribute Admin admin){
         adminRepository.save(admin) ;
-
         return "redirect:/demo/all" ;
     }
 
@@ -52,10 +53,11 @@ public class AdminController {
     public String addsAdmin(@ModelAttribute Admin admin){
         Admin admin1 = new Admin();
         admin1.setId(a);
-        admin1.setFirstName(admin.getFirstName());
-        admin1.setLastName(admin.getLastName());
+        admin1.setAty(admin.getAty());
+        admin1.setZhoni(admin.getZhoni());
         admin1.setEmail(admin.getEmail());
         adminRepository.save(admin1) ;
+
 
         return "redirect:/demo/all" ;
     }
@@ -63,8 +65,8 @@ public class AdminController {
     @RequestMapping(value = "/update",method = RequestMethod.GET)
     public ModelAndView updateAdmins(Model model,@RequestParam("id") long id){
         a=id;
-        Optional<Admin> author = (Optional <Admin> ) adminRepository.findById(id);
-        model.addAttribute("adminn",author);
+        Optional<Admin> admin = (Optional <Admin> ) adminRepository.findById(id);
+        model.addAttribute("adminn",admin);
         return new ModelAndView("update");
     }
     @RequestMapping(value = "/deleteContact",method = RequestMethod.GET)
